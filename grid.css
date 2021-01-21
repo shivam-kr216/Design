@@ -1,0 +1,129 @@
+.top-visual-1{
+    grid-area: visual-1;
+}
+
+.top-visual-2{
+    grid-area: visual-2;
+}
+
+.top-visual-3{
+    grid-area: visual-3;
+}
+
+.dashboard-card{
+    grid-area: sidebar;
+    z-index: 2;
+    background-color: #808080;
+}
+
+.midbar-1{
+    grid-area: midbar;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+    /*border: 1px solid #000;*/
+    width: auto;
+}
+
+.container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    grid-template-areas:
+        "visual-1 visual-2 visual-3 sidebar"
+        "midbar midbar midbar sidebar";
+}
+
+.top-visual-1, .top-visual-2, .top-visual-3{
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+
+.dashboard-menu{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    line-height: 3em;
+    color: #fff;
+}
+
+.dashboard-menu ul{
+    list-style-type: none;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #000046,#1CB5E0);
+}
+
+.input-div{
+    width: 500px;
+    height: 100px;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.input-data{
+    width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+    transform: translateY(-20px);
+}
+
+.input-div .input-data input{
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #808080;
+    
+}
+
+.input-div .input-data label{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #808080;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-div .input-data button{
+    width: 80px;
+    height: 30px;
+    border: none;
+    float: right;
+    outline: none;
+    text-decoration: underline;
+    font-size: 16px;
+    margin: 10px 0 0 10px;
+}
+
+.team1::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100px;
+    width: 2px;
+    background-color: #808080;
+  }
